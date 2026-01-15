@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background-light dark:bg-dark-bg text-gray-900 dark:text-dark-text font-sans antialiased;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+}
+
+@layer components {
+
+  /* Section Styles */
+  .section {
+    @apply border-b border-border-light dark:border-dark-border py-6;
+  }
+
+  .section:last-child {
+    @apply border-b-0;
+  }
+
+  /* Card Styles */
+  .card {
+    @apply bg-white dark:bg-dark-bg-secondary rounded-xl border border-border-light dark:border-dark-border p-6;
+  }
+
+  /* Button Styles */
+  .btn-primary {
+    @apply bg-accent-primary hover:bg-accent-primary-hover text-white px-4 py-2 rounded-lg font-medium transition-colors duration-200;
+  }
+
+  .btn-secondary {
+    @apply bg-gray-100 dark:bg-dark-bg-tertiary hover:bg-gray-200 dark:hover:bg-dark-border text-gray-900 dark:text-dark-text px-4 py-2 rounded-lg font-medium transition-colors duration-200;
+  }
+
+  .btn-icon {
+    @apply p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-dark-bg-tertiary transition-colors duration-200;
+  }
+
+  /* Input Styles */
+  .input {
+    @apply bg-white dark:bg-dark-bg-secondary border border-border-light dark:border-dark-border rounded-lg px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-accent-primary/20 focus:border-accent-primary dark:text-dark-text transition-all duration-200;
+  }
+
+  .textarea {
+    @apply input resize-none;
+  }
+
+  /* Label Styles */
+  .label {
+    @apply block text-sm font-medium text-gray-700 dark:text-dark-text-secondary mb-2;
+  }
+
+  /* Toggle Switch */
+  .toggle {
+    @apply relative inline-flex h-6 w-11 items-center rounded-full transition-colors bg-gray-200 dark:bg-dark-border;
+  }
+
+  .toggle.active {
+    @apply bg-accent-primary;
+  }
+
+  .toggle-thumb {
+    @apply inline-block h-4 w-4 transform rounded-full bg-white transition-transform;
+  }
+
+  .toggle.active .toggle-thumb {
+    @apply translate-x-6;
+  }
+}
+
+@layer utilities {
+
+  /* Scrollbar Styling */
+  .scrollbar-custom::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  .scrollbar-custom::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+
+  .scrollbar-custom::-webkit-scrollbar-thumb {
+    @apply bg-gray-300 dark:bg-dark-border rounded-full;
+  }
+
+  .scrollbar-custom::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-400 dark:bg-gray-600;
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "identity": "E1: The Anti-AI Designer",
+  "project_name": "Text-to-SQL GenAI System",
+  "design_philosophy": {
+    "core_principle": "Fusion over Imitation",
+    "vibe": "The Performance Pro (Data Edition) - Precise, Fast, Intelligent",
+    "anti_patterns": [
+      "No generic 'Chatbot' layouts (input at bottom, empty screen)",
+      "No 'Inter' font for headings",
+      "No purple/teal gradients for CTAs",
+      "No center-aligned text blocks for data"
+    ]
+  },
+  "typography": {
+    "primary_font": "Manrope",
+    "heading_font": "Outfit",
+    "mono_font": "JetBrains Mono",
+    "scale": {
+      "h1": "text-4xl md:text-5xl font-bold tracking-tight",
+      "h2": "text-3xl font-semibold tracking-tight",
+      "h3": "text-2xl font-medium",
+      "body": "text-base leading-relaxed",
+      "small": "text-sm font-medium tracking-wide uppercase text-muted-foreground",
+      "code": "text-sm font-mono"
+    },
+    "imports": [
+      "@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Manrope:wght@400;500;600&family=Outfit:wght@500;700&display=swap');"
+    ]
+  },
+  "colors": {
+    "mode": "dark",
+    "palette": {
+      "background": "#09090B",
+      "foreground": "#FAFAFA",
+      "card": "#121214",
+      "card_foreground": "#FAFAFA",
+      "popover": "#121214",
+      "popover_foreground": "#FAFAFA",
+      "primary": "#3B82F6",
+      "primary_foreground": "#FFFFFF",
+      "secondary": "#27272A",
+      "secondary_foreground": "#FAFAFA",
+      "muted": "#27272A",
+      "muted_foreground": "#A1A1AA",
+      "accent": "#F97316",
+      "accent_foreground": "#FFFFFF",
+      "destructive": "#EF4444",
+      "destructive_foreground": "#FAFAFA",
+      "border": "#27272A",
+      "input": "#27272A",
+      "ring": "#3B82F6"
+    },
+    "chart_colors": [
+      "#3B82F6",
+      "#F97316",
+      "#10B981",
+      "#8B5CF6",
+      "#EC4899"
+    ]
+  },
+  "layout": {
+    "structure": "Sidebar + Main Content Area",
+    "grid_system": "Bento Grid (Mode B: High Density)",
+    "spacing": {
+      "container_padding": "p-6 md:p-8",
+      "gap": "gap-6",
+      "section_spacing": "py-12"
+    },
+    "sidebar": {
+      "width": "w-64",
+      "style": "Fixed, border-r border-border bg-card/50 backdrop-blur-xl"
+    }
+  },
+  "components": {
+    "QueryInput": {
+      "description": "The 'Hero' component. Not just an input. A command center.",
+      "style": "Large, centered initially, moves to top on interaction. Glassmorphism background. High elevation (shadow-2xl).",
+      "props": "placeholder='Ask your data a question...', autoFocus=true"
+    },
+    "SQLDisplay": {
+      "description": "Editable code block showing the generated SQL.",
+      "style": "Monospace font, dark theme syntax highlighting, copy button, 'Run Query' action button (Accent Color).",
+      "wrapper": "Rounded-lg border border-border bg-black/50 p-4"
+    },
+    "ResultsTable": {
+      "description": "Data grid for query results.",
+      "style": "Dense, sticky header, hover rows, minimal borders. No vertical lines inside table.",
+      "features": "Pagination, Sortable columns, Export to CSV"
+    },
+    "SchemaViewer": {
+      "description": "Visual representation of the database schema.",
+      "style": "Tree view or Accordion list in the sidebar. Icons for tables and columns (Key icon for PK).",
+      "location": "Sidebar (Right or Left)"
+    },
+    "HistorySidebar": {
+      "description": "List of past natural language queries.",
+      "style": "Timeline style. Small text. Click to restore.",
+      "location": "Sidebar (Left)"
+    }
+  },
+  "visual_enhancers": {
+    "glassmorphism": "backdrop-blur-xl bg-background/70 border border-white/10",
+    "grid_borders": "Use 'divide-y divide-border' for lists and 'border border-border' for cards.",
+    "tracing_beam": "Use on the active query card or the 'Generating...' state.",
+    "noise_texture": "Overlay a subtle noise texture on the background to reduce digital flatness."
+  },
+  "motion": {
+    "library": "framer-motion",
+    "animations": {
+      "fade_in": {
+        "initial": { "opacity": 0, "y": 10 },
+        "animate": { "opacity": 1, "y": 0 },
+        "transition": { "duration": 0.4 }
+      },
+      "stream_text": {
+        "description": "Typewriter effect for the SQL generation."
+      },
+      "expand": {
+        "initial": { "height": 0, "opacity": 0 },
+        "animate": { "height": "auto", "opacity": 1 }
+      }
+    }
+  },
+  "image_urls": {
+    "background_texture": {
+      "url": "https://images.unsplash.com/photo-1568607184887-647b905c0966?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODl8MHwxfHNlYXJjaHw0fHxhYnN0cmFjdCUyMGRhdGElMjB2aXN1YWxpemF0aW9uJTIwbWluaW1hbCUyMGRhcmt8ZW58MHx8fHwxNzY4MzgzMjUwfDA&ixlib=rb-4.1.0&q=85",
+      "description": "Subtle dark woven texture for sidebar or modal backgrounds (use with low opacity overlay).",
+      "category": "texture"
+    }
+  },
+  "instructions_to_main_agent": [
+    "CRITICAL: Use .js extension for all React components (e.g., QueryInput.js).",
+    "CRITICAL: Do not use 'Inter' font. Use 'Outfit' for headings and 'Manrope' for body.",
+    "CRITICAL: Ensure all interactive elements have 'data-testid'.",
+    "CRITICAL: The 'Query Input' must be the focal point. Use a large text area with a 'Generate' button that uses the Accent color (#F97316).",
+    "CRITICAL: Use 'sonner' for toast notifications (e.g., 'Query executed successfully').",
+    "CRITICAL: Implement a 'Dark Mode' toggle, but default to Dark Mode.",
+    "CRITICAL: For the SQL display, use a library like 'react-syntax-highlighter' or a simple pre/code block with custom styling if libraries are restricted.",
+    "CRITICAL: The 'Results Table' must handle empty states gracefully (show a 'No results found' illustration or text).",
+    "CRITICAL: Use 'lucide-react' for icons (Database, Play, History, Code, Table).",
+    "CRITICAL: Do not use gradients for the main background. Use a solid dark color (#09090B) with the provided noise texture or subtle grid lines.",
+    "CRITICAL: Follow the 'Bento Grid' layout for the dashboard view (if displaying multiple widgets)."
+  ],
+  "universal_guidelines": [
+    "Don't make generic centered layouts.",
+    "Create depth through layered design elements with z-index hierarchy.",
+    "Use glass-morphism effects with backdrop filters (12-24px blur).",
+    "Every interaction needs micro-animations.",
+    "Use 2-3x more spacing than feels comfortable."
+  ]
+}
