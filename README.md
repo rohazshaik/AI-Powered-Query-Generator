@@ -10,24 +10,6 @@
 
 ---
 
-## 📖 Table of Contents
-
-- [Overview](#-overview)
-- [Features](#-features)
-- [Tech Stack](#-tech-stack)
-- [Prerequisites](#-prerequisites)
-- [Installation & Setup](#-installation--setup)
-- [Usage](#-usage)
-- [Project Structure](#-project-structure)
-- [API Documentation](#-api-documentation)
-- [Database Schema](#-database-schema)
-- [Security](#-security)
-- [Deployment](#-deployment)
-- [Troubleshooting](#-troubleshooting)
-- [Contributing](#-contributing)
-- [License](#-license)
-
----
 
 ## 🌟 Overview
 
@@ -83,19 +65,6 @@ A modern full-stack application that converts natural language questions into SQ
 | **Pydantic** | Data validation |
 
 ---
-
-## 📋 Prerequisites
-
-Before you begin, ensure you have the following installed:
-
-### Required
-- **Node.js** 18+ and npm ([Download](https://nodejs.org/))
-- **Python** 3.9+ ([Download](https://www.python.org/downloads/))
-- **Ollama** ([Download](https://ollama.com/download))
-
-### Optional
-- **MongoDB** (for persistent query history)
-- **Git** (for version control)
 
 ---
 
